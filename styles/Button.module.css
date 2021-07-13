@@ -1,0 +1,29 @@
+.button {
+  display: inline-block;
+  color: #343a40;
+  font-family: sans-serif;
+  font-weight: 900;
+  font-size: 14px;
+  border: 2px solid #343a40;
+  border-radius: 10px;
+  padding: 5px 5px;
+  transition: all 0.2s;
+}
+
+.button:hover {
+  color: white;
+  background-color: #343a40;
+}
+.active {
+  background-color: #ffc107;
+  color: #343a40;
+  transform: 0.2s all;
+}
+@keyframes scale {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}

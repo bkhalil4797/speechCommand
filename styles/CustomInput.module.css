@@ -1,0 +1,12 @@
+.container {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  border: 1px solid #343a40;
+  border-radius: 5px;
+  padding: 5px 10px;
+  transform: scale(0.9);
+}
+.container > * {
+  margin: 0px 5px;
+}

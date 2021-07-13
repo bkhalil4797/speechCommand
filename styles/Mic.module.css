@@ -1,0 +1,15 @@
+.svg {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke-width: 2px;
+  stroke: #343a40;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: 1s all;
+}
+.active {
+  transform: scale(0.8);
+  opacity: 0.8;
+  stroke: #ffc107;
+}
