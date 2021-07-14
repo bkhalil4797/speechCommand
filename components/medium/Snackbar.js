@@ -35,18 +35,15 @@ export const Snackbar = ({ message, type, setState }) => {
         <line x1="12" y1="8" x2="12.01" y2="8"></line>
       </svg>
     );
-  const timer = useCallback(() => {
-    setTimeout(() => {
-      setState({ message: "", type: "" });
-    }, 3000);
-  }, [setState]);
 
   useEffect(() => {
     if (message?.length > 0) {
-      timer();
+      timer = setTimeout(() => {
+        setState({ message: "", type: "" });
+      }, 3000);
       return () => clearTimeout(timer);
     }
-  }, [timer, message]);
+  }, [message, setState]);
 
   return (
     <>

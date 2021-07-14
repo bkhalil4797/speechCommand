@@ -41,8 +41,7 @@ export const CustomInput = () => {
         setIsListening(false);
         setMic(false);
       }, micTimer * 1000),
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    [activeRecognizer, micTimer]
+    [micTimer, setIsListening]
   );
 
   const handleRecognizer = async () => {
