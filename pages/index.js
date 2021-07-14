@@ -1,12 +1,12 @@
-import { DropDown } from "../components/medium/DropDown";
-import { Modal } from "../components/medium/Modal";
+import { Header } from "../components/layout/Header";
+import { CustomInput } from "../components/medium/CustomInput";
 
 export default function Home() {
   return (
     <>
-      <div>Hello World</div>
-      <Modal />
-      <DropDown />
+      <Header />
+      <CustomInput />
+      <CustomInput />
     </>
   );
 }

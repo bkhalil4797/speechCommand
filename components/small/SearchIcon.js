@@ -1,6 +1,6 @@
 const styles = {
-  width: "24px",
-  height: "24px",
+  width: "20px",
+  height: "20px",
   fill: "none",
   strokeWidth: "2px",
   stroke: "#343a40",

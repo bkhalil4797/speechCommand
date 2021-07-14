@@ -2,8 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import styles from "../../styles/DopDown.module.css";
 import { Button } from "../small/Button";
 
-export const DropDown = () => {
-  const [open, setOpen] = useState(false);
+export const DropDown = ({ children, open, setOpen }) => {
   const container = useRef();
 
   const handleClose = (e) => {
@@ -15,9 +14,6 @@ export const DropDown = () => {
     }
   };
 
-  useEffect(() => {
-    console.log("render");
-  });
   return (
     <>
       <div
@@ -28,10 +24,8 @@ export const DropDown = () => {
       ></div>
 
       <div className={styles.container}>
-        <Button state={open} setState={setOpen} text="ClickMe" />
-
         <div className={`${styles.dropdown} ${!open && styles.displaynone}`}>
-          <p>DropDown</p>
+          {children}
         </div>
       </div>
     </>

@@ -5,11 +5,16 @@
 .dropdown {
   position: absolute;
   background-color: #fff;
-  min-width: 160px;
+  top: 25px;
+  left: -200px;
+  min-width: 300px;
   z-index: 1;
   border: 1px solid #343a40;
   border-radius: 5px;
   animation: opacity 0.5s ease-in-out;
+  overflow: initial;
+  padding: 10px;
+  cursor: default;
 }
 .background {
   position: fixed;

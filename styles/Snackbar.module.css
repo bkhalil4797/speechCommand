@@ -1,0 +1,35 @@
+.snackbar {
+  cursor: default;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: white;
+  font-size: 18px;
+  padding: 10px 30px;
+  position: fixed;
+  top: 0;
+  left: calc(50vw - 150px);
+  transform: translateY(50px);
+  width: 300px;
+  height: 80px;
+  animation: fadeIn 0.5s, fadeOut 0.5s 4.6s;
+  transition: all 0.5s;
+  z-index: 5;
+  border-radius: 15px;
+}
+@keyframes fadeIn {
+  from {
+    transform: translateY(-80px);
+  }
+  to {
+    transform: translateY(50px);
+  }
+}
+@keyframes fadeOut {
+  from {
+    transform: translateY(50px);
+  }
+  to {
+    transform: translateY(-80px);
+  }
+}

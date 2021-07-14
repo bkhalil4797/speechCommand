@@ -1,14 +1,16 @@
 import { useState } from "react";
 import styles from "../../styles/Mic.module.css";
 
-export const Mic = () => {
-  const [state, setState] = useState(false);
+export const Mic = ({ state, setState, onClick = () => {} }) => {
+  const handleClick = () => {
+    onClick();
+  };
   return (
     <>
       <svg
         viewBox="0 0 24 24"
         className={`${styles.svg} ${state && styles.active}`}
-        onClick={() => setState(!state)}
+        onClick={handleClick}
       >
         {state ? (
           <>

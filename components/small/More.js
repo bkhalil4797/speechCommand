@@ -1,8 +1,7 @@
 import { useState } from "react";
 import styles from "../../styles/More.module.css";
 
-export const More = () => {
-  const [state, setState] = useState(false);
+export const More = ({ state, setState }) => {
   return (
     <>
       <svg

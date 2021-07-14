@@ -1,4 +1,5 @@
 .button {
+  cursor: pointer;
   display: inline-block;
   color: #343a40;
   font-family: sans-serif;
@@ -6,17 +7,19 @@
   font-size: 14px;
   border: 2px solid #343a40;
   border-radius: 10px;
-  padding: 5px 5px;
-  transition: all 0.2s;
+  padding: 10px 15px;
+  transition: all 0.5s;
+  background-color: #fff;
+  animation: display 0.5s ease-in;
 }
 
 .button:hover {
   color: white;
   background-color: #343a40;
 }
-.active {
-  background-color: #ffc107;
-  color: #343a40;
+.button.active {
+  background-color: #343a40;
+  color: white;
   transform: 0.2s all;
 }
 @keyframes scale {
@@ -25,5 +28,13 @@
   }
   to {
     transform: scale(1);
+  }
+}
+@keyframes display {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

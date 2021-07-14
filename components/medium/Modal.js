@@ -1,8 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import styles from "../../styles/Modal.module.css";
 
-export const Modal = ({ children }) => {
-  const [open, setOpen] = useState(false);
+export const Modal = ({ children, open, setOpen }) => {
   const container = useRef();
 
   const handleClose = (e) => {
@@ -16,21 +15,14 @@ export const Modal = ({ children }) => {
 
   return (
     <>
-      <button onClick={() => setOpen(!open)}>click me</button>
-      {open ? (
-        <div
-          ref={container}
-          onClick={handleClose}
-          id="myModal"
-          className={styles.container}
-        >
-          <div className={styles.modal}>
-            <p>Some text in the Modal..</p>
-          </div>
-        </div>
-      ) : (
-        <></>
-      )}
+      <div
+        ref={container}
+        onClick={handleClose}
+        id="myModal"
+        className={styles.container}
+      >
+        <div className={styles.modal}>{children}</div>
+      </div>
     </>
   );
 };

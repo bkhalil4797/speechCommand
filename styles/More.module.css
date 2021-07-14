@@ -1,17 +1,18 @@
 .svg {
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   fill: none;
   stroke-width: 2px;
   stroke: #343a40;
   stroke-linecap: round;
   stroke-linejoin: round;
   transition: 1s all;
+  cursor: pointer;
 }
 .active {
   animation: rotate 0.5s ease-in;
   transform: rotate(90deg) scale(0.9);
-  stroke: #ffc107;
+  stroke: #d21404;
 }
 @keyframes rotate {
   from {
