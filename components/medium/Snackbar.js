@@ -38,7 +38,7 @@ export const Snackbar = ({ message, type, setState }) => {
 
   useEffect(() => {
     if (message?.length > 0) {
-      timer = setTimeout(() => {
+      const timer = setTimeout(() => {
         setState({ message: "", type: "" });
       }, 3000);
       return () => clearTimeout(timer);
