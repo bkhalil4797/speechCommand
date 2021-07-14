@@ -53,7 +53,6 @@ export const Snackbar = ({ message, type, setState }) => {
           style={{ backgroundColor: colors }}
           onClick={() => {
             setState({ message: "", type: "" });
-            clearTimeout(timer);
           }}
         >
           {icons}
