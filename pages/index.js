@@ -6,6 +6,7 @@ export default function Home() {
     <>
       <Header />
       <CustomInput />
+      <div style={{ margin: "20px" }}></div>
       <CustomInput />
     </>
   );
