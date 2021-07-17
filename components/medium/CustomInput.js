@@ -112,7 +112,7 @@ export const CustomInput = () => {
     if (isListening && mic) {
       try {
         if (!recOneWord) {
-          clearTimeout(timer);
+          clearTimeout(timer(activeRecognizer));
         }
         activeRecognizer.stopListening();
       } catch (err) {
